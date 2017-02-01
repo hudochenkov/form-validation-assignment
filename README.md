@@ -1,47 +1,21 @@
-# How to work
+# Form validation
 
-All files for production are compiled with [Gulp]. CSS compiled with [PostCSS]. JavaScript libs and plugins are concatenated to the single file. Images are optimized. HTML just copied.
+My coding assignment for [VONQ](https://www.vonq.com/).
 
-## Setup
+Try the [deployed solution](https://hudochenkov.github.io/form-validation-assignment/) or read below how to run it locally.
 
-1. Install [Node.js].
-2. Install development modules:
+## How to run locally
 
-		$ npm install
+Install dependencies:
 
-3. Run `npm run gulp build`.
+```
+$ npm install
+```
 
-## Folders structure
+And run development server:
 
-`root` — configs and dependencies.
+```
+$ npm run gulp
+```
 
-`build` — destination directory. There would be generated assets. Shouldn't be in repository.
-
-`dev` — source directory for everything:
-
-* dev root — HTML.
-* `img` — images.
-	* `img/temp` — temporary images. They don't go to production and for demonstration purpose only.
-* `js` — JavaScript.
-	* `js/libs` — JavaScript libraries and plugins, that can't be installed via npm.
-* `pcss` — PostCSS files.
-
-## Generate assets
-
-Start watching service which generates _dev_ version on each source file change, also this start local webserver with autoreload:
-
-	$ npm run gulp
-
-Generate _production_ (minified and optimized) version:
-
-	$ npm run gulp build
-
-## Other Gulp-tasks
-
-**lint** — check code style in stylesheets and JavaScipt files.
-
-**deploy** — upload files to the server.
-
-[Gulp]: https://github.com/gulpjs/gulp/tree/4.0
-[PostCSS]: https://github.com/postcss/postcss/
-[Node.js]: https://nodejs.org/
+It’ll open the app in your browser.
