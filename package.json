@@ -1,0 +1,33 @@
+{
+  "name": "form-validation-assignment",
+  "version": "1.0.0",
+  "description": "front-end",
+  "repository": "hudochenkov/form-validation-assignment",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "gulp",
+    "test": "gulp lint",
+    "gulp": "./node_modules/.bin/gulp"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.1",
+    "browser-sync": "^2.18.7",
+    "cssnano": "^3.10.0",
+    "del": "^2.2.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-postcss": "^6.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylelint": "^3.7.0",
+    "gulp-uglify": "^2.0.1",
+    "postcss-calc": "^5.3.1",
+    "postcss-hexrgba": "^0.2.1",
+    "postcss-import": "^9.1.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0",
+    "stylelint-order": "^0.2.2",
+    "stylelint-scss": "^1.4.1"
+  }
+}

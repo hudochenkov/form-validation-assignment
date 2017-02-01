@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Form Validation</title>
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<h1 class="page-title">Form Validation</h1>
+
+	<form class="form js-form">
+		<h2 class="form__title">All required</h2>
+
+		<p class="form__field">
+			<label class="form__label">Radio (checked)</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio2" value="1" checked required>
+
+				Radio 1
+			</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio2" value="2">
+
+				Radio 2
+			</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio2" value="3">
+
+				Radio 3
+			</label>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Radio</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio" value="1" required>
+
+				Radio 1
+			</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio" value="2">
+
+				Radio 2
+			</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio" value="3">
+
+				Radio 3
+			</label>
+		</p>
+
+		<p class="form__submit-wrapper">
+			<input class="form__submit" type="submit" value="Submit">
+		</p>
+	</form>
+
+	<form class="signup js-signup">
+		<div class="signup__row">
+			<p class="signup__field">
+				<label class="signup__label" for="signup-name">First and Last Name</label>
+
+				<input class="signup__textfield" type="text" name="name" id="signup-name" placeholder="First and Last Name" required>
+			</p>
+
+			<p class="signup__field">
+				<label class="signup__label" for="signup-email">Email</label>
+
+				<input class="signup__textfield" type="email" name="email" id="signup-email" placeholder="Email" required>
+			</p>
+
+			<p class="signup__field">
+				<label class="signup__label" for="signup-password">Password</label>
+
+				<input class="signup__textfield" type="password" name="password" id="signup-password" placeholder="Password" required>
+			</p>
+
+			<p class="signup__submit-wrapper">
+				<input class="signup__submit" type="submit" value="Join">
+			</p>
+		</div>
+
+		<div class="signup__row">
+			<p class="signup__field">
+				<label class="signup__checkbox-label">
+					<input class="signup__checkbox" type="checkbox" name="tos" required>
+
+					I accept the <a class="signup__tos-link" href="#">Terms of Service</a>
+				</label>
+			</p>
+
+			<p class="signup__login">
+				<a class="signup__login-link" href="#">Log in with Facebook</a>
+			</p>
+		</div>
+	</form>
+
+	<form class="form js-form">
+		<h2 class="form__title">Internal rules</h2>
+
+		<p class="form__field">
+			<label class="form__label">Max length (10)</label>
+
+			<input class="form__textfield" type="text" name="test-maxlength" maxlength="10" value="18 characters long">
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Min length (5)</label>
+
+			<input class="form__textfield" type="text" name="test-minlength" minlength="5" value="hi">
+		</p>
+
+		<p class="form__submit-wrapper">
+			<input class="form__submit" type="submit" value="Submit">
+		</p>
+	</form>
+
+	<form class="form js-form">
+		<h2 class="form__title">Fields are always valid (no rules are triggering)</h2>
+
+		<p class="form__field">
+			<label class="form__label">Text (empty)</label>
+
+			<input class="form__textfield" type="text" name="test-maxlength">
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Text (disabled)</label>
+
+			<input class="form__textfield" type="text" name="test-maxlength" disabled>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Text (readonly)</label>
+
+			<input class="form__textfield" type="text" name="test-maxlength" readonly>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Text</label>
+
+			<input class="form__textfield" type="text" name="test-maxlength" value="18 characters long">
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Password</label>
+
+			<input class="form__textfield" type="text" name="test-maxlength">
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Password</label>
+
+			<input class="form__textfield" type="email" name="test-maxlength">
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Textarea</label>
+
+			<textarea class="form__textfield" name="textarea"></textarea>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">
+				<input class="form__checkbox" type="checkbox" name="test-checkbox">
+
+				Checkbox
+			</label>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">
+				<input class="form__checkbox" type="checkbox" name="test-checkbox2" checked>
+
+				Checkbox (checked)
+			</label>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Radio</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio" value="1">
+
+				Radio 1
+			</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio" value="2">
+
+				Radio 2
+			</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio" value="3">
+
+				Radio 3
+			</label>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Radio (checked)</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio2" value="1" checked>
+
+				Radio 1
+			</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio2" value="2">
+
+				Radio 2
+			</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio2" value="3">
+
+				Radio 3
+			</label>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Select</label>
+
+			<select class="form__select" name="select">
+				<option></option>
+				<option>Option 1</option>
+				<option>Option 2</option>
+				<option>Option 3</option>
+			</select>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Select (selected)</label>
+
+			<select class="form__select" name="select">
+				<option></option>
+				<option>Option 1</option>
+				<option selected>Option 2</option>
+				<option>Option 3</option>
+			</select>
+		</p>
+
+		<p class="form__submit-wrapper">
+			<input class="form__submit" type="submit" value="Submit">
+		</p>
+	</form>
+
+	<form class="form js-form">
+		<h2 class="form__title">All required</h2>
+
+		<p class="form__field">
+			<label class="form__label">Text (empty)</label>
+
+			<input class="form__textfield" type="text" name="test-maxlength" required>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Text (disabled)</label>
+
+			<input class="form__textfield" type="text" name="test-maxlength" required disabled>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Text (readonly)</label>
+
+			<input class="form__textfield" type="text" name="test-maxlength" required readonly>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Text</label>
+
+			<input class="form__textfield" type="text" name="test-maxlength" value="18 characters long" required>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Password</label>
+
+			<input class="form__textfield" type="text" name="test-maxlength" required>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Password</label>
+
+			<input class="form__textfield" type="email" name="test-maxlength" required>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Textarea</label>
+
+			<textarea class="form__textfield" name="textarea" required></textarea>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">
+				<input class="form__checkbox" type="checkbox" name="test-checkbox" required>
+
+				Checkbox
+			</label>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">
+				<input class="form__checkbox" type="checkbox" name="test-checkbox2" required checked>
+
+				Checkbox (checked)
+			</label>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Radio</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio" value="1" required>
+
+				Radio 1
+			</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio" value="2">
+
+				Radio 2
+			</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio" value="3">
+
+				Radio 3
+			</label>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Radio (checked)</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio2" value="1" checked required>
+
+				Radio 1
+			</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio2" value="2">
+
+				Radio 2
+			</label>
+
+			<label class="form__label">
+				<input class="form__checkbox" type="radio" name="test-radio2" value="3">
+
+				Radio 3
+			</label>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Select</label>
+
+			<select class="form__select" name="select" required>
+				<option></option>
+				<option>Option 1</option>
+				<option>Option 2</option>
+				<option>Option 3</option>
+			</select>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Select (selected)</label>
+
+			<select class="form__select" name="select" required>
+				<option></option>
+				<option>Option 1</option>
+				<option selected>Option 2</option>
+				<option>Option 3</option>
+			</select>
+		</p>
+
+		<p class="form__submit-wrapper">
+			<input class="form__submit" type="submit" value="Submit">
+		</p>
+	</form>
+
+	<form class="form js-form-with-custom-rule">
+		<h2 class="form__title">Custom rule for emails</h2>
+
+		<p class="form__field">
+			<label class="form__label">Email (empty)</label>
+
+			<input class="form__textfield" type="email" name="test-email-1">
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Email</label>
+
+			<input class="form__textfield" type="email" name="test-email-2" value="is.valid+email@address.com">
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Email</label>
+
+			<input class="form__textfield" type="email" name="test-email-3" value="this isn't an email">
+		</p>
+
+		<p class="form__submit-wrapper">
+			<input class="form__submit" type="submit" value="Submit">
+		</p>
+	</form>
+
+	<form class="form js-form-2">
+		<h2 class="form__title">Regular form, previous form settings don't applied</h2>
+
+		<p class="form__field">
+			<label class="form__label">Email (empty)</label>
+
+			<input class="form__textfield" type="email" name="test-email-1">
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Email</label>
+
+			<input class="form__textfield" type="email" name="test-email-2" value="is.valid+email@address.com">
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Email</label>
+
+			<input class="form__textfield" type="email" name="test-email-3" value="this isn't an email">
+		</p>
+
+		<p class="form__submit-wrapper">
+			<input class="form__submit" type="submit" value="Submit">
+		</p>
+	</form>
+
+	<form class="form js-custom-message">
+		<h2 class="form__title">Custom message for required</h2>
+
+		<p class="form__field">
+			<label class="form__label">Text (empty)</label>
+
+			<input class="form__textfield" type="text" name="test-email-1" required>
+		</p>
+
+		<p class="form__field">
+			<label class="form__label">Text</label>
+
+			<input class="form__textfield" type="text" name="test-email-2" required value="is.valid+email@address.com">
+		</p>
+
+		<p class="form__submit-wrapper">
+			<input class="form__submit" type="submit" value="Submit">
+		</p>
+	</form>
+
+	<div class="form-indicator"></div>
+</div>
+
+<script src="js/bfaValidator.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
